@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>changes </title>
+</head>
+<body>
+
+<p id="demo">点击按钮显示一个随机数</p>
+<button onclick="myFunction()">点我</button>
+    
+<p id="demo1">点击按钮显示一个随机数</p>
+<button onclick="myFunction1()">点我</button>
+
+<p id="demo2"> 数组模式显示 随机数</p>
+<button onclick="myFunction2(arr)">NO.1点我</button>
+
+<!-- <div id="demo3"> 数组模式显示 随机数</div> -->
+<button onclick="myFunction2(arr1)">NO.2点我</button>
+<button onclick="myFunction2(arr2)">NO.3点我</button>
+<button onclick="myFunction2(arr3)">NO.4点我</button>
+<p id="No4"> 前四个 round</p>
+<button onclick="myFunction3()">ROUND4点我嘿嘿</button>
+<script>
+function myFunction(){
+    
+     var a = Math.ceil(Math.random()*8)
+     var b = Math.ceil(Math.random()*8)
+     var c = Math.ceil(Math.random()*8)
+     var d = Math.ceil(Math.random()*8)
+     var e = Math.ceil(Math.random()*8)
+     var f = Math.ceil(Math.random()*8)
+     
+     document.getElementById("demo").innerHTML=[a,b,c,d,e,f]
+}
+    
+function myFunction1(){
+    
+     var a = Math.ceil(Math.random()*8)
+     var b = Math.ceil(Math.random()*8)
+     var c = Math.ceil(Math.random()*12)
+     var d = Math.ceil(Math.random()*12)
+     var e = Math.ceil(Math.random()*12)
+     var f = Math.ceil(Math.random()*12)
+     
+     document.getElementById("demo1").innerHTML=[a,b,c]
+}
+
+     var arr = [[1,1],[1,5],[1,7],[1,8],[5,8],[7,8],[3,8],[3,1]];
+
+     var arr1 = [[6,6],[6,2],[6,4],[6,3],[2,3],[4,3],[8,3],[8,6]];
+
+     var arr2 = [[7,7],[7,3],[7,1],[7,2],[3,2],[1,2],[5,2],[5,7]];
+
+     var arr3 = [[4,4],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+
+function myFunction2(arr){
+     
+     var num1 = Math.floor(Math.random()*8)
+     // var demo2 = demo2
+     document.getElementById('demo2').innerHTML= arr[num1]
+
+ }
+
+var arrNo4 =  [[1,1],[1,5],[1,7],[1,8],[5,8],[7,8],[3,8],[3,1],[6,6],[6,2],[6,4],[6,3],[2,3],[4,3],[8,3],[8,6],[7,7],[7,3],[7,1],[7,2],[3,2],[1,2],[5,2],[5,7],[4,4],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+
+function myFunction3(){
+     var num4 = Math.floor(Math.random()*32);
+
+     document.getElementById("No4").innerHTML = arrNo4[num4];
+}
+
+
+
+//    // var i;
+// function myFunction2(){
+//    
+//    // var cars = new Array();
+//    // cars[0] = Math.ceil(Math.random()*8);
+//    // cars[1] = Math.ceil(Math.random()*8);
+//    // cars[2] = Math.ceil(Math.random()*24)
+   
+        
+        
+   
+//    // for (i=0;i<cars.length;i++)
+//    // {
+//    // document.write(cars[i] + "<br>");
+//    // }
+//    var ran = Math.floor(Math.random()*8)
+        
+//    for (i=0;i<2;i++)
+//    {
+//      var content = document.write(arr[ran][i]+'<br>')
+
+     
+//    }
+//    document.getElementById("demo2").innerHTML=content
+// }
+
+</script>
+
+</body>
+</html>
