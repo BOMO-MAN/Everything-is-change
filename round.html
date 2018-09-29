@@ -25,8 +25,15 @@
 <button class="btn btn-warning" onclick="myFunction2(arr1)">NO.2点我</button>
 <button class="btn btn-warning" onclick="myFunction2(arr2)">NO.3点我</button>
 <button class="btn btn-warning" onclick="myFunction2(arr3)">NO.4点我</button>
+<button class="btn btn-warning" onclick="myFunction2(arr4)">NO.5点我</button>
+<button class="btn btn-warning" onclick="myFunction2(arr5)">NO.6点我</button>
+<button class="btn btn-warning" onclick="myFunction2(arr6)">NO.7点我</button>
+<button class="btn btn-warning" onclick="myFunction2(arr7)">NO.8点我</button>
 <h2 id="No4"> 前四个 round</h2>
 <button class="btn btn-warning" onclick="myFunction3()">ROUND4点我嘿嘿</button>
+
+<h2 id="XiPai">洗牌算法</h2>
+<button class="btn btn-warning" onclick="shuffle(arr10)">洗牌算法</button>
 <script>
 function myFunction(){
     
@@ -60,6 +67,14 @@ function myFunction1(){
 
      var arr3 = [[4,4],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
 
+     var arr4 = [[5,5],[5,1],[5,3],[5,4],[1,4],[3,4],[7,4],[7,5]];
+
+     var arr5 = [[3,3],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+
+     var arr6 = [[8,8],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+
+     var arr7 = [[2,2],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+
 function myFunction2(arr){
      
      var num1 = Math.floor(Math.random()*8)
@@ -76,6 +91,13 @@ function myFunction3(){
      document.getElementById("No4").innerHTML = arrNo4[num4];
 }
 
+var arrNo8 =[];
+
+function myFunction4(){
+     var num8 = Math.floor(Math.random()*34);
+
+     document.getElementById("demo2").innerHTML = arrNo8[num8]
+}
 
 
 //    // var i;
@@ -103,6 +125,53 @@ function myFunction3(){
 //    }
 //    document.getElementById("demo2").innerHTML=content
 // }
+// 
+//  洗牌算法
+ // Array.ptototype.shuffle = function() {
+ //     var array = this;
+ //     var m = arr.length;
+ //     var t ;
+ //     var i ;
+
+ //     while ( m ) {
+ //          i = Math.floor(Math.random() * m--);
+ //          t = array[m];
+ //          array[m] = array[i];
+ //          array[i] = t;
+ //     }
+
+ //     return array
+ // }
+
+ 
+ var arr10 = [1,2,3,4,5,6,7,8,9,10]
+
+
+
+ function shuffle(array) {
+     var m = array.length;
+     var t ;
+     var i ;
+     console.log('11111')
+     console.log(array.length)
+
+     while(m) {
+
+          i = Math.floor(Math.random()* m--);
+          t = array[m];
+          array[m] = array[i];
+          array[i] = t ;
+          
+          console.log('2222')
+          // document.getElementById("XiPai") = array;
+          console.log('2222')
+          return array
+     }
+     console.log('2222')
+     // 
+ }
+
+
 
 </script>
 
