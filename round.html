@@ -33,7 +33,10 @@
 <button class="btn btn-warning" onclick="myFunction3()">ROUND4点我嘿嘿</button>
 
 <h2 id="XiPai">洗牌算法</h2>
-<button class="btn btn-warning" onclick="shuffle(arr10)">洗牌算法</button>
+<button class="btn btn-warning" onclick="myFunction10()">洗牌算法</button>
+
+<h2 id="sort">洗牌算法2</h2>
+<button class="btn btn-warning" onclick="myFunction12()">洗牌算法2</button>
 <script>
 function myFunction(){
     
@@ -164,14 +167,28 @@ function myFunction4(){
           
           console.log('2222')
           // document.getElementById("XiPai") = array;
-          console.log('2222')
+          console.log(array)
+
           return array
      }
-     console.log('2222')
-     // 
+
  }
 
+function myFunction10() {
+  
+    document.getElementById("XiPai").innerHTML = shuffle(arr10);
+}
 
+//  打乱数组第二种方法
+function randomsort(a,b) {
+     return Math.random() > 0.5 ? -1 : 1;
+}
+
+var arr12 = arr10.sort(randomsort)
+
+function myFunction12() {
+     document.getElementById("sort").innerHTML = arr12;
+}
 
 </script>
 
