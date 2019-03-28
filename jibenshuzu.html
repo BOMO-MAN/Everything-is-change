@@ -21,6 +21,13 @@
         <span>4444</span>
         <button>随机</button>
     </div>
+    <!--  yang -->
+    <h2 id="arrYang"> 数组模式显示 随机数</h2>
+    <button class="btn btn-warning" onclick="myFunction12(arrYang)">  NO.1点我 </button>
+
+     <!--  yin -->
+     <h2 id="arrYin"> 数组模式显示 随机数</h2>
+     <button class="btn btn-warning" onclick="myFunction12(arrYin)">  NO.2点我 </button>
     
     <script>
         // 基本
@@ -91,6 +98,40 @@
 
             [8,1],[7,1],[6,1],[5,1],[4,1],[3,1],[2,1],[1,1]
         ]
+
+        //  dizhijiazi
+        //  基础
+        var arrYang = [
+            [1,1],[6,6],[7,7],[4,4],
+            [1,6],[1,7],[1,4],[6,7],[6,4],[7,4],
+            [6,1],[7,1],[4,1],[7,6],[4,6],[4,7],
+        ]
+
+        var arrYin = [
+            [5,5],[3,3],[8,8],[2,2],
+            [5,3],[5,8],[5,2],[3,8],[3,2],[8,2],
+            [3,5],[8,5],[2,5],[8,3],[2,3],[2,8],
+        ]
+
+        //  打乱数组第二种方法
+        function randomsort(a,b) {
+
+            return Math.random() > 0.5 ? -1 : 1;
+
+        }
+
+        
+
+        function myFunction12(arrYang) {
+
+          var arr12 = arrYang.sort(randomsort);
+         
+          document.getElementById('arrYang').innerHTML = arr12;
+   
+        }
+
+
+
 
 
       
