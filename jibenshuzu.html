@@ -23,11 +23,11 @@
     </div>
     <!--  yang -->
     <h2 id="arrYang"> 数组模式显示 随机数</h2>
-    <button class="btn btn-warning" onclick="myFunction12(arrYang)">  NO.1点我 </button>
+    <button class="btn btn-warning" onclick="myFunction12(arrYang)">  单个点我 </button>
 
      <!--  yin -->
-     <h2 id="arrYin"> 数组模式显示 随机数</h2>
-     <button class="btn btn-warning" onclick="myFunction12(arrYin)">  NO.2点我 </button>
+     <h2 id="arrYang1"> 数组模式显示 随机数</h2>
+     <button class="btn btn-warning" onclick="myFunction13(arrYang)">  整体组合点我 </button>
     
     <script>
         // 基本
@@ -126,8 +126,15 @@
 
           var arr12 = arrYang.sort(randomsort);
          
-          document.getElementById('arrYang').innerHTML = arr12;
+          document.getElementById('arrYang').innerHTML = arr12[Math.ceil(Math.random()*12)];
    
+        }
+
+        function myFunction13(arrYang) {
+
+            var arr12 = arrYang.sort(randomsort);
+
+            document.getElementById('arrYang1').innerHTML = arr12;
         }
 
 
