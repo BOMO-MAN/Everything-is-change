@@ -19,16 +19,17 @@
 <button class="btn btn-warning" onclick="myFunction1()">点我</button>
 
 <h2 id="demo2"> 数组模式显示 随机数</h2>
-<button class="btn btn-warning" onclick="myFunction2(arr)">NO.1点我</button>
+<button class="btn btn-warning" onclick="myFunction2(arr)">  NO.1点我 </button>
+ 
+<!-- <div id="demo3"> 数组模式显示 随机数</div> --> 
+<button class="btn btn-warning" onclick="myFunction2(arr1)"> NO.2点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr2)"> NO.3点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr3)"> NO.4点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr4)"> NO.5点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr5)"> NO.6点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr6)"> NO.7点我 </button>
+<button class="btn btn-warning" onclick="myFunction2(arr7)"> NO.8点我 </button>
 
-<!-- <div id="demo3"> 数组模式显示 随机数</div> -->
-<button class="btn btn-warning" onclick="myFunction2(arr1)">NO.2点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr2)">NO.3点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr3)">NO.4点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr4)">NO.5点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr5)">NO.6点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr6)">NO.7点我</button>
-<button class="btn btn-warning" onclick="myFunction2(arr7)">NO.8点我</button>
 <h2 id="No4"> 前四个 round</h2>
 <button class="btn btn-warning" onclick="myFunction3()">ROUND4点我嘿嘿</button>
 
@@ -37,9 +38,62 @@
 
 <h2 id="sort">洗牌算法2</h2>
 <button class="btn btn-warning" onclick="myFunction12()">洗牌算法2</button>
+<div class="AllChangeBox"></div>
+
+<h2 id="dizhi">洗牌算法3</h2>
+<button class="btn btn-warning" onclick="dizhi()">洗牌算法2</button>
+<div class="dizhi"></div>
+
+<!--  64 棋牌 -->
+<div class="centent">
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+       88
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+       88
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+       66
+     </a>
+  </div>
+  <div class="col-md-1">
+     <a href="#" class="thumbnail">
+       <img src="..." alt="...">
+       55
+     </a>
+  </div>
+</div>
+
 <script>
 function myFunction(){
-    
      var a = Math.ceil(Math.random()*8)
      var b = Math.ceil(Math.random()*8)
      var c = Math.ceil(Math.random()*8)
@@ -60,6 +114,7 @@ function myFunction1(){
      var f = Math.ceil(Math.random()*12)
      
      document.getElementById("demo1").innerHTML=[a,b,c];
+     
 }
 
      var arr  = [[1,1],[1,5],[1,7],[1,8],[5,8],[7,8],[3,8],[3,1]];
@@ -74,9 +129,50 @@ function myFunction1(){
 
      var arr5 = [[3,3],[3,7],[3,5],[3,6],[7,6],[5,6],[1,6],[1,3]];
 
-     var arr6 = [[8,8],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+     var arr6 = [[8,8],[8,4],[8,2],[8,1],[4,1],[2,1],[6,1],[6,8]];
 
-     var arr7 = [[2,2],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
+     var arr7 = [[2,2],[2,6],[2,8],[2,7],[6,7],[8,7],[4,7],[4,2]];
+
+
+
+     var arr11 = [[8,8],[7,8],[6,8],[5,8],[4,8],[3,8],[2,8],[1,8]];
+
+     var arr12 = [[8,7],[7,7],[6,7],[5,7],[4,7],[3,7],[2,7],[1,7]];
+
+     var arr13 = [[8,6],[7,6],[6,6],[5,6],[4,6],[3,6],[2,6],[1,6]];
+
+     var arr14 = [[8,5],[7,5],[6,5],[5,5],[4,5],[3,5],[2,5],[1,5]];
+
+     var arr15 = [[8,4],[7,4],[6,4],[5,4],[4,4],[3,4],[2,4],[1,4]];
+
+     var arr16 = [[8,3],[7,3],[6,3],[5,3],[4,3],[3,3],[2,3],[1,3]];
+
+     var arr17 = [[8,2],[7,2],[6,2],[5,2],[4,2],[3,2],[2,2],[1,2]];
+
+     var arr18 = [[8,1],[7,1],[6,1],[5,1],[4,1],[3,1],[2,1],[1,1]];
+
+     
+
+
+    [
+    
+      [1,1],[8,8],[6,4],[7,6],[6,1],[1,6],[8,6],
+      [6,8],[5,1],[1,2],[8,1],[1,8],
+      [1,3],[3,1],[8,7],[4,8],[2,4],
+      [7,5],[8,2],[5,8],[3,4],[7,3],
+      [7,8],[7,4],[1,4],[7,1],[7,4],
+      [2,5],[6,6],[3,3]
+
+      [2,7],[4,5],[1,7],[4,1],
+      [3,8],[8,3],[5,3],[3,2],
+      [6,7],[4,6],[7,2],[5,4],[2,1],[1,5],[2,8],
+      [8,5],[2,6],[6,5],[2,3],[3,5],[4,4],
+      [7,7],[5,7],[4,2],[4,3],[3,7],[5,5],
+      [2,2],[5,6],[6,2],[5,2],
+      [4,7],[6,3],[3,6]
+
+    ];
+
 
 function myFunction2(arr){
      
@@ -84,7 +180,7 @@ function myFunction2(arr){
      // var demo2 = demo2
      document.getElementById('demo2').innerHTML= arr[num1]
 
- }
+}
 
 var arrNo4 =  [[1,1],[1,5],[1,7],[1,8],[5,8],[7,8],[3,8],[3,1],[6,6],[6,2],[6,4],[6,3],[2,3],[4,3],[8,3],[8,6],[7,7],[7,3],[7,1],[7,2],[3,2],[1,2],[5,2],[5,7],[4,4],[4,8],[4,6],[4,5],[8,5],[6,5],[2,5],[2,4]];
 
@@ -97,9 +193,11 @@ function myFunction3(){
 var arrNo8 =[];
 
 function myFunction4(){
+     
      var num8 = Math.floor(Math.random()*34);
 
      document.getElementById("demo2").innerHTML = arrNo8[num8]
+
 }
 
 
@@ -182,7 +280,9 @@ function myFunction10() {
 
 //  打乱数组第二种方法
 function randomsort(a,b) {
+
      return Math.random() > 0.5 ? -1 : 1;
+     
 }
 
 var arr12 = arr10.sort(randomsort)
@@ -190,6 +290,16 @@ var arr12 = arr10.sort(randomsort)
 function myFunction12() {
      document.getElementById("sort").innerHTML = arr12;
 }
+
+//dizhi
+var dizhiArr = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+
+function dizhi() {
+     document.getElementById("dizhi").innerHTML = shuffle(dizhiArr);
+}
+
+
+
 
 </script>
 
