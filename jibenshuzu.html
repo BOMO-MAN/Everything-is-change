@@ -171,11 +171,13 @@
 
         function addNode1(arr) {
 
-            for (let index = 0; index < arr.length-1; index++) {
+            var arrNew = arr.sort(randomsort);
+
+            for (let index = 0; index < arrNew.length-1; index++) {
              
                 var node = document.createElement('span');
 
-                node.innerHTML = arr[index];
+                node.innerHTML = arrNew[index];
 
                 document.getElementById('demo').appendChild(node)
      
