@@ -12,6 +12,18 @@
        #normal span {
           white-space: 12px;
        }
+       #demo {
+           /* margin-top: 40px; */
+       }
+       span {
+           width: 80px;
+           height: 80px;
+      
+           /* padding: 8px; */
+           margin: 10px 0;
+           margin-right: 10px;
+           border: 1px solid #666666;
+       }
      
      </style>
 </head>
@@ -23,12 +35,14 @@
     </div>
     <!--  yang -->
     <h2 id="arrYang"> 数组模式显示 随机数</h2>
-    <button class="btn btn-warning" onclick="myFunction12(arrYang)">  单个点我 </button>
+    <button class="btn btn-warning" onclick="single(arrYang,'arrYang')">  单个点我 </button>
 
      <!--  yin -->
      <h2 id="arrYang1"> 数组模式显示 随机数</h2>
-     <button class="btn btn-warning" onclick="myFunction13(arrYang)">  整体组合点我 </button>
+     <button class="btn btn-warning" onclick="whole(arrYang,'arrYang1')">  整体组合点我 </button>
     
+     <div id="demo"></div>
+     <button class="btn btn-warning" onclick="addNode1(arrYang)">点击显示内容</button>
     <script>
         // 基本
         var xianTianBaGua = [1,2,3,4,5,6,7,8];
@@ -122,20 +136,56 @@
 
         
 
-        function myFunction12(arrYang) {
+        function single(array,setElement) {
 
           var arr12 = arrYang.sort(randomsort);
-         
-          document.getElementById('arrYang').innerHTML = arr12[Math.ceil(Math.random()*12)];
+          
+          document.getElementById(setElement).innerHTML = arr12[Math.ceil(Math.random()*12)];
    
         }
 
-        function myFunction13(arrYang) {
+        function whole(array,setElement) {
 
             var arr12 = arrYang.sort(randomsort);
 
             document.getElementById('arrYang1').innerHTML = arr12;
+
         }
+
+        //  新增HTML函数
+
+        function addNode(){
+            // 创建节点
+            var node = document.createElement('span')
+
+            // 给节点添加元素
+            node.innerHTML = 'jfodsaueing'
+
+            // 推送到父元素中去
+
+            document.getElementById('demo').appendChild(node)
+
+        }
+
+        //  改造循环函数
+
+        function addNode1(arr) {
+
+            for (let index = 0; index < arr.length-1; index++) {
+             
+                var node = document.createElement('span');
+
+                node.innerHTML = arr[index];
+
+                document.getElementById('demo').appendChild(node)
+     
+            }
+
+        }
+
+
+
+
 
 
 
