@@ -39,10 +39,11 @@
 
      <!--  yin -->
      <h2 id="arrYang1"> 数组模式显示 随机数</h2>
-     <button class="btn btn-warning" onclick="whole(arrYang,'arrYang1')">  整体组合点我 </button>
+     <button style="margin: 30px 0" class="btn btn-warning" onclick="whole(arrYang,'arrYang1')">  整体组合点我 </button>
     
      <div id="demo"></div>
      <button class="btn btn-warning" onclick="addNode1(arrYang)">点击显示内容</button>
+     <button class="btn btn-warning" onclick="deleteAll()">删除元素</button>
     <script>
         // 基本
         var xianTianBaGua = [1,2,3,4,5,6,7,8];
@@ -127,6 +128,7 @@
             [3,5],[8,5],[2,5],[8,3],[2,3],[2,8],
         ]
 
+        var 
         //  打乱数组第二种方法
         function randomsort(a,b) {
 
@@ -167,7 +169,7 @@
 
         }
 
-        //  改造循环函数
+        //  改造循环函数   存在问题  重复添加元素
 
         function addNode1(arr) {
 
@@ -183,6 +185,12 @@
      
             }
 
+        }
+
+        //  情况所有元素
+
+        function deleteAll(){
+            document.getElementById('demo').innerHTML = '';
         }
 
 
