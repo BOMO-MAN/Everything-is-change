@@ -6,10 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style> 
+        body {
+          text-align: center;
+          margin-top: 40px;
+          max-width: 960px;
+        }
+        #tiangan,#dizhi {
+            font-size: 24px;
+            color: #595959;
+        }
+  
+    
+    </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+    <div>
+        <div id="tiangan">tiangan</div>
+        <div id="dizhi">dizhi</div>
+    </div>
     
+    <button class="btn btn-warning" onclick="addNode1(TianGan,'tiangan')">随机切换</button>
+    <button class="btn btn-warning" onclick="addNode1(DiZhi,'dizhi')">随机切换</button>
+    <script>
+     // 天干数组
+     var TianGan =  ['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
+     var DiZhi = ['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
+
+     //  打乱数组第二种方法
+        function randomsort(a,b) {
+
+            return Math.random() > 0.5 ? -1 : 1;
+
+            }
+     //  改造循环函数   存在问题  重复添加元素  第一个参数为数组，第二个参数为挂载元素
+        function addNode1(arr,ele) {
+            // 清空元素内容 
+            document.getElementById(ele).innerHTML = '';
+
+            //  打乱数组顺序
+            var arrNew = arr.sort(randomsort);
+
+            //  循环新增html元素
+            for (let index = 0; index < 4; index++) {
+             
+                var node = document.createElement('a');
+
+                node.setAttribute('class','col-md-2');
+                node.innerHTML = arrNew[index];
+
+                document.getElementById(ele).appendChild(node)
+     
+            }
+     
+
+        }
+    </script>
 </body>
 </html>
